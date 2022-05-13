@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Twitter from "./Twitter";
 
+
 class App extends Component {
 
   state = {
@@ -42,7 +43,9 @@ class App extends Component {
 
     return (
       <div>
-      <button onClick={this.onRemove}> Remover componentes </button>
+      <button onClick={this.onRemove}> 
+        Remover componentes 
+      </button>
       {this.state.actived && (<Twitter posts={posts} loading={this.state.loading} />)} 
       </div>
     )
