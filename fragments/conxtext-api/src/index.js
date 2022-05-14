@@ -3,24 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ErrorBoundary from './ErrorBoundary';
-
-//Essa semanantica passada na aula não é mais aceita na versão atual do React.
-// const main = (
-//   <ErrorBoundary>
-//     <App />
-//   </ErrorBoundary>
-// )
-
-
-//ReactDOM.render(main, document.getElementById('root'));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ErrorBoundary>
-     <App />
-   </ErrorBoundary> 
+    <App />
   </React.StrictMode>
 );
 

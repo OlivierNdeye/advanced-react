@@ -1,21 +1,23 @@
-import { type } from "@testing-library/user-event/dist/type";
 import React, { Fragment } from "react";
 
-const store =[{
-  type: 'Roupas'
-}, {
-  type: 'Calçados'
-},{
-  type:'Camisetas'
-}]
+const store =['', '', '']
 
-function Column({ type }){
+function Column(){
   return(
  <>
  <tr>
   <td>
-    { type.name.console }
-  </td>    
+    "Chapéu
+  </td>
+  <td>
+    Sapatos
+  </td>
+  <td>
+    ou...roupa usada 
+  </td>
+  <td>
+    quem tem(Seu madruga)"
+  </td> 
  </tr>
  </>    
   )
@@ -26,7 +28,7 @@ function App() {
 
   const renderColumn = (element, key) => (
     <Fragment key={`column-${key}`}>
-      <Column type={element.type} />
+      <Column />
     </Fragment>
   )
 
