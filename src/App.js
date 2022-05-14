@@ -1,16 +1,41 @@
-import React from "react";
-import { ThemeContext, themes } from './Theme'
-import Card from './Card'
+import React, { Fragment } from "react";
 
-function App () {
+const store =['', '', '']
+
+function Column(){
   return(
-    <div style={{color:"lightblue", fontSize:"40px"}}>
-      Precione aqui !
-      <ThemeContext.Provider value={themes.primary}>
-      <Card />
-      </ThemeContext.Provider>
-    </div>
-      
+ <>
+ <tr>
+  <td>
+    "Chapéu
+  </td>
+  <td>
+    Sapatos
+  </td>
+  <td>
+    ou...roupa usada 
+  </td>
+  <td>
+    quem tem(Seu madruga)"
+  </td> 
+ </tr>
+ </>    
+  )
+}
+
+
+function App() {
+
+  const renderColumn = (element, key) => (
+    <Fragment key={`column-${key}`}>
+      <Column />
+    </Fragment>
+  )
+
+  return (
+      <table>
+          { store.map(renderColumn) }
+      </table>
   )
 }
 
